@@ -20,3 +20,26 @@ variable "vpc_id" {
   type        = string
   description = "The VPC ID provided by the VPC module"
 }
+
+variable "app_subnet_ids" {
+  type        = list(string)
+  description = "Subnet ids provided by the VPC module"
+}
+
+variable "asg-desired-size" {
+  description = "Desired size of the Auto Scaling Group (Nodes)"
+  type = number
+  default = 1
+}
+
+variable "asg-min-size" {
+  description = "Minimum size of the Auto Scaling Group (Nodes)"
+  type = number
+  default = 1
+}
+
+variable "asg-max-size" {
+  description = "Minimum size of the Auto Scaling Group (Nodes)"
+  type = number
+  default = 1
+}
