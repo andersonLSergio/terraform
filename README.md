@@ -1,4 +1,4 @@
-# Amazon EKS Cluster
+# [Amazon EKS Cluster Module](https://github.com/andersonLSergio/terraform/tree/master/aws)
 
 This Terraform module includes all AWS resources needed to deploy a functional Amazon EKS cluster, such as:
 - VPC (this includes subnets, multi AZ for HA capability, internet gateways, routing tables and so on)
@@ -9,7 +9,7 @@ This Terraform module includes all AWS resources needed to deploy a functional A
 - Kubernetes resources (to enable ALB ingress from the Kubernetes pods)
 
 ## EKS Diagram:
-<img src="../assets/aws_eks.png" height="600" alt="EKS Diagram" />
+<img src="./assets/aws_eks.png" height="600" alt="EKS Diagram" />
 
 ## Usage
 
