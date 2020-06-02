@@ -16,6 +16,7 @@ resource "aws_subnet" "application" {
   cidr_block        = "10.0.2${count.index}.0/24"
   vpc_id            = aws_vpc.eks_vpc.id 
   tags = {
+    "Name"                                  = "application"
     "kubernetes.io/cluster/${var.eks_name}" = "shared"
   }
 }
