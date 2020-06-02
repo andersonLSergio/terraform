@@ -43,3 +43,8 @@ variable "asg-max-size" {
   type = number
   default = 1
 }
+
+variable "alb_ingress_ctrl_version" {
+  type = string
+  default = "v1.1.4"
+}

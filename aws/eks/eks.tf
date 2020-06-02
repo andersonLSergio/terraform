@@ -27,8 +27,8 @@ resource "aws_eks_node_group" "node-group" {
     max_size     = var.asg-max-size
   }
 
-  # Ensure that IAM Role permissions are created before and deleted after EKS Node Group handling.
-  # Otherwise, EKS will not be able to properly delete EC2 Instances and Elastic Network Interfaces.
+  # Manage dependencies in order to make sure that Terraform is able to create and delete 
+  # NodeGroup EC2 instances and its internet interfaces
   depends_on = [
     aws_iam_role_policy_attachment.AmazonEKSWorkerNodePolicy,
     aws_iam_role_policy_attachment.AmazonEKS_CNI_Policy,
